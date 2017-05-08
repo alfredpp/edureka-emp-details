@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html ng-app="empApp">
 <head>
-     <title>MEAN Application</title>     
-     <link href="/libs/css/bootstrap.min.css" rel="stylesheet"> 
-     <link href="/libs/css/style.css" rel="stylesheet"> 
+     <title>Employee Details</title>     
+     <link href="/libs/css/bootstrap.min.css" rel="stylesheet">
+     <link href="/libs/css/style.css" rel="stylesheet">
      <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -19,14 +19,14 @@
   });
 
   </script>
-    
+
 </head>
 
 <body>
     <div class="container" ng-controller="emp-app-controller">
       <br/>
       <h1 align="center">Employee Details</h1><br/><br/>
-      <table class="table">          
+      <table class="table">
         <thead>
           <tr>
             <td>Name</td>
@@ -38,10 +38,10 @@
             <td colspan="2" align="center">Action</td>
           </tr>
         </thead>
-          
+
         <tbody>
             <tr>
-                
+
               <form>
                   <td>
                     <input class="form-control" ng-model="employee.name" required  placeholder="Name"/>
@@ -65,13 +65,13 @@
                       <button class="btn btn-success btn-md" ng-click="addEmployee()">Add Employee</button>
                       <td><button class="btn btn-success btn-md" ng-click="updateEmployee()">Update Employee</button></td>
                   </td>
-            
+
               </form>
-            </tr> 
-            
+            </tr>
+
             <tr ng-repeat="employee in employees" class="row-col">
                 <td>{{employee.name}}</td>
-                <td>{{employee.email}}</td>               
+                <td>{{employee.email}}</td>
                 <td>{{employee.dob | date:'yyyy-MM-dd'}}</td>
                 <td>{{employee.department}}</td>
                 <td>{{employee.gender}}</td>
@@ -80,19 +80,17 @@
                   <button class="btn btn-danger btn-sm" ng-click="removeEmployee(employee._id)">Delete</button>&nbsp;&nbsp;
                   <button class="btn btn-primary btn-sm" ng-click="editEmployee(employee._id)">Edit</button>
                 </td>
-                
-            </tr> 
-            
-            
+
+            </tr>
+
+
           </tbody>
-          
-        </table>  
+
+        </table>
     </div>
 
-     <script src="/libs/js/angular.min.js"></script>  
+     <script src="/libs/js/angular.min.js"></script>
      <script src="/controllers/controller.js"></script>
 </body>
-    
+
 </html>
-
-
